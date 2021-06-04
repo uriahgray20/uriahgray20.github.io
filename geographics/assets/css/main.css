@@ -1,0 +1,174 @@
+body {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 23px;
+	background:white;
+}
+
+body.pagecolor {
+	background-color:blue;
+}
+
+a {
+	color:lime;
+}
+
+img {
+	width:100%;
+}
+
+.title {
+	position:fixed;
+	top:0px;
+	left:0px;
+	font-size:60px;
+	padding:10px;
+	color:lime;
+	z-index:3;
+}
+
+.caption {
+	font-size:16px;
+}
+
+.square1 {
+	width:400px;
+	height:250px;
+	background-color:lime;
+	position:fixed;
+	top:50px;
+	right:250px;
+	z-index: 3;
+	border-radius:10px;
+	
+}
+
+
+.square2 {
+	width:250px;
+	height:350px;
+	background-color:lime;
+	position:fixed;
+	left:150px;
+	bottom:50px;
+	border-radius:10px;
+}
+
+.streetviewcaption {
+	text-align:center;
+	color:lime;
+}
+
+
+.streetview {
+	width:90%;
+	height:90vh;
+	background-image:url("background/street-view.png");
+	background-size:cover;
+	margin:5% auto 10px;	
+	border-radius:20px;
+}
+
+.streetview2 {
+	width:90%;
+	height:90vh;
+	background-image:url("background/street-view2.png");
+	background-size:cover;
+	margin:5% auto 10px;
+	border-radius:20px;	
+}
+
+.streetview3 {
+	width:90%;
+	height:90vh;
+	background-image:url("background/street-view3.png");
+	background-size:cover;
+	margin:5% auto 10px;
+	border-radius:20px;	
+}
+
+.streetview4 {
+	width:90%;
+	height:90vh;
+	background-image:url("background/street-view4.png");
+	background-size:cover;
+	margin:5% auto 10px;
+	border-radius:20px;	
+}
+
+.fg {
+	width:80%;
+	height:80vh;
+	background-image:url("background/deep-time.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	position:fixed;
+	top:10%;
+	left:10%;
+}
+
+.button {
+	position:fixed;
+	top:10px;
+	right:10px;
+	width:100px;
+	padding:20px;
+	border-radius:10px;
+	text-align:center;
+	background-color:lime;
+}
+
+.button a {
+	color:white;
+	text-decoration:none;
+}
+
+.page {
+	width:70%;
+	margin-left:auto;
+	color:lime;
+}
+
+
+.page p {	
+	font-size:37px;
+	text-indent:30%;
+}
+
+.page p.noindent {
+	text-indent:0px;
+}
+
+.page p.chapterbreak {
+	margin-top:400px;
+}
+
+.page strong {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:34px;	
+}
+
+.page em {
+	font-style: italic;
+}
+
+.quote {
+	margin-top:200px;
+	margin-bottom:200px;
+}
+
+.header {
+	font-size:60px;
+	padding-top:50px;
+}
+
+.author {
+	margin-bottom:400px;
+}
+
+
+
+
+
+
+
