@@ -1,0 +1,100 @@
+body {
+    background-color:black;
+}
+
+@font-face {
+    font-family:'uriahsfont';
+    src:url('fonts_wild-vessel-rational_wild-vessel-rational.ttf') format('truetype');
+}
+
+div.poster {
+    background-color:lightblue;
+    width:75%;
+    overflow: hidden;
+}
+
+div.text {
+    font-size:120px;
+    line-height: 90%;
+    font-family:arial;
+    text-align:center;
+    color:red;
+    transition:0.5s;
+    border-top:1px solid red;
+}
+
+/* rule 1 */
+
+div.text.one {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+div.text.two {
+    text-transform: lowercase;
+    text-align: center;
+
+}
+
+div.text.three {
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* rule 2 */
+
+div.text.a {
+    font-family:arial;
+    transform: skew(20deg);
+}
+
+div.text.b {
+    font-family:'uriahsfont';
+    transform: skew(-30deg);
+}
+
+div.text.c {
+    color:lightblue;
+}
+
+/* rule 3 */
+
+div.text.x {
+    font-size:60px;
+}
+
+div.text.y{
+    font-size:120px;
+}
+
+div.text.z {
+    font-size:200px;
+}
+
+div.small {
+    font-size: 30px;
+    color:red;
+    text-align: center;
+}
+
+.play-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+  }
+  
+  .play-button {
+    text-align: center;
+    background-color: white;
+    border-radius:20px;
+    padding:20px;
+    font-size:30px;
+    font-family: arial;
+    cursor: pointer;
+  }
