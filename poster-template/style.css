@@ -17,16 +17,21 @@ div.text {
 
 /* rule 1 */
 
+/* to do a comment type cmd + ? */
+
 div.text.one {
     font-size:30px;
+    background-color:rgba(0, 0, 255, 0.572);
 }
 
 div.text.two {
     font-size:60px;
+    background-color:#e71d1d;
 }
 
 div.text.three {
     font-size:160px;
+    background-color:rgb(157, 100, 44);
 }
 
 /* rule 2 */

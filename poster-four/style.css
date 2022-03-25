@@ -1,0 +1,119 @@
+body {
+    background-color:black;
+}
+
+div.poster {
+    background-color:white;
+    width:75%;
+}
+
+div.container {
+    display:flex;
+    flex-wrap:wrap;
+
+}
+
+div.col {
+    overflow:hidden;
+}
+
+/* thirds grid */
+
+div.w1-3 {
+    width:33.333%;
+}
+
+div.w2-3 {
+    width:66.66%;
+}
+
+div.w3-3 {
+    width:100%;
+}
+
+/* half widths */
+
+div.w1-2 {
+    width:50%;
+}
+
+div.w2-2 {
+    width:100%;
+}
+
+/* fourth gird */
+
+div.w1-4 {
+    width:25%;
+}
+
+div.w2-4 {
+    width:50%;
+}
+
+div.w3-4 {
+    width:75%;
+}
+
+div.w4-4 {
+    width:100%;
+}
+
+
+
+div.text {
+    font-size:120px;
+    font-family:arial;
+    color:red;
+    transition:0.5s;
+}
+
+/* rule 1 */
+
+/* to do a comment type cmd + ? */
+
+div.text.one {
+    font-size:40px;
+}
+
+div.text.two {
+    font-size:40px;
+}
+
+div.text.three {
+    font-size:40px;
+}
+
+/* rule 2 */
+
+div.text.a {
+    color:blue;
+}
+
+div.text.b {
+    color:orchid;
+}
+
+div.text.c {
+    color:lime;
+}
+
+/* rule 3 */
+
+div.text.x {
+    background-color: blue;
+}
+
+div.text.y{
+    background-color: red;
+}
+
+div.text.z {
+    background-color: green;
+}
+
+div.small {
+    font-size: 30px;
+    color:red;
+    text-align: center;
+}
