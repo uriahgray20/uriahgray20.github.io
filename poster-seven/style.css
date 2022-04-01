@@ -1,0 +1,91 @@
+body {
+    background-color:red;
+}
+
+div.poster {
+    background-color:blue;
+    width:75%;
+}
+
+div.header {
+    font-family:arial narrow;
+    font-size:50px;
+    text-transform: uppercase;
+    text-align: center;
+    color:black;
+}
+
+
+div.text {
+    font-size:120px;
+    font-family:arial narrow;
+    text-align:left;
+    color:black;
+    transition:0.5s;
+}
+
+.container {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.col {
+  
+}
+
+.w1-2 {
+    width:50%;
+}
+
+/* rule 1 */
+
+/* to do a comment type cmd + ? */
+
+div.text.one {
+    font-size:150px;
+}
+
+div.text.two {
+    font-size:200px;
+}
+
+div.text.three {
+    font-size:400px;
+}
+
+/* rule 2 */
+
+div.text.a {
+    color:black;
+}
+
+div.text.b {
+    color:black;
+}
+
+div.text.c {
+    color:black;
+}
+
+/* rule 3 */
+
+div.text.x {
+    background-image:url('sky.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+div.text.y{
+
+}
+
+div.text.z {
+
+}
+
+div.small {
+    font-size: 30px;
+    color:red;
+    text-align: center;
+}

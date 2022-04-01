@@ -1,19 +1,25 @@
 body {
-    background-color:red;
+    background-color:black;
 }
 
 div.poster {
     background-color:white;
     width:75%;
+    box-shadow: inset 0px 0px 20px 20px black;
 }
 
 div.container {
     display:flex;
     flex-wrap:wrap;
+    align-items: center;
 }
 
 div.col {
     overflow:hidden;
+}
+
+div.col img {
+    width: 100%;
 }
 
 /* 4 col grid */
@@ -62,10 +68,19 @@ div.w2-2 {
 
 div.text {
     font-size:120px;
-    font-family:arial;
+    font-family:arial narrow;
     text-align:center;
     color:red;
     transition:0.5s;
+}
+
+div.header {
+    font-size:100px;
+    line-height:100px;
+    font-family:arial narrow;
+    font-weight: normal;
+    text-align:center;
+    color:red;
 }
 
 /* rule 1 */
@@ -73,18 +88,18 @@ div.text {
 /* to do a comment type cmd + ? */
 
 div.text.one {
-    font-size:30px;
-    background-color:rgba(0, 0, 255, 0.572);
+    font-size:100px;
+    line-height: 90px;
 }
 
 div.text.two {
-    font-size:60px;
-    background-color:#e71d1d;
+    font-size:200px;
+    line-height: 190px;
 }
 
 div.text.three {
-    font-size:160px;
-    background-color:rgb(157, 100, 44);
+    font-size:400px;
+    line-height: 300px;
 }
 
 /* rule 2 */
@@ -116,7 +131,7 @@ div.text.z {
 }
 
 div.small {
+    font-family:arial narrow;
     font-size: 30px;
     color:red;
-    text-align: center;
 }

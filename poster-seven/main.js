@@ -6,8 +6,6 @@ $(function(){
     var xyz = ["x", "y", "z"];
 
     function randomClass() {
-        const synth = new Tone.MonoSynth().toMaster();
-        synth.triggerAttackRelease("B2", "6n");
         $(".text").each(function () {
             $(this).removeClass(num);
             $(this).addClass(num[Math.floor(Math.random() * num.length)]);
@@ -23,12 +21,6 @@ $(function(){
         setTimeout(randomClass, 1500)
     }
 
-    
-
-    $(".play-button").click(function () {
-        Tone.Transport.start();
-        randomClass();
-        $(".play-wrapper").hide();
-      });
+    randomClass();
 
 });
