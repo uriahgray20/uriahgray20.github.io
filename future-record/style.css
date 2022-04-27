@@ -2,43 +2,72 @@ body {
     font-family: arial;
 }
 
-/* nav */
-div.nav {
 
-}
 
 div.button {
-
+    border-bottom:1px solid black;
+    margin-right:20px;
 }
 
 div.logo {
-
+    border:1px solid transparent;
 }
 
 /* masthead */
 
 div.masthead {
+    font-size:44vw;
+    text-align: center;
+    background-color: black;
+    color:white;
+}
 
+div.about {
+    font-family: serif;
+    font-size:4vw;
+    padding:20px;
+}
+
+/* filter */
+div.filter {
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+    border-top: 1px solid black;
+    color:black;
 }
 
 /* grid */
 
 div.container {
-
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
 }
 
 div.item {
+    width: 25%;
+}
+
+div.number {
+    font-size:30px;
+}
+
+div.desciption {
 
 }
 
-div.large {
+div.col {
 
 }
 
-div.medium {
-
+div.nav {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-div.small {
-
+div.w-1-2 {
+    width: 50%;
 }
