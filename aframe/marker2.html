@@ -18,14 +18,15 @@
       <a-marker preset="hiro">
 
         <a-entity
-        position="0 0 0"
-        scale="0.05 0.05 0.05"        
-        geometry="primitive: box"
-        light="type: point; intensity: 2.0"
+        material="shader: html; 
+        target: #planeHTML; 
+        ratio: height; 
+        transparent: true; 
+        side: double"
+        position="0 2 -6"
+        geometry="primitive: plane; height: 600; width: 400"
         >
         </a-entity>
-
-        <!-- <a-plane material="shader: html; target: #planeHTML; ratio: height; transparent: true; side: double" position="0 2 -6"></a-plane> -->
 
       </a-marker>
 
