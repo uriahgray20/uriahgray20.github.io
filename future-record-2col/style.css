@@ -1,0 +1,78 @@
+body {
+    font-family: arial;
+}
+
+
+
+div.button {
+    border-bottom:1px solid black;
+    margin-right:20px;
+}
+
+div.logo {
+    border:1px solid transparent;
+}
+
+/* masthead */
+
+div.masthead {
+    font-size:100px;
+    text-align: center;
+}
+
+/* two col scroll */
+
+div.scroll  {
+    width: 50%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+div.about {
+    font-family: serif;
+    font-size:4vw;
+}
+
+/* filter */
+div.filter {
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+    border-top: 1px solid black;
+    color:black;
+}
+
+/* grid */
+
+div.container {
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+div.item {
+    width: 50%;
+}
+
+div.number {
+    font-size:30px;
+}
+
+div.desciption {
+
+}
+
+div.col {
+
+}
+
+div.nav {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+div.w-1-2 {
+    width: 50%;
+}

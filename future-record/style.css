@@ -1,5 +1,6 @@
 body {
     font-family: arial;
+    font-size: 21px;
 }
 
 
@@ -16,10 +17,27 @@ div.logo {
 /* masthead */
 
 div.masthead {
-    font-size:44vw;
-    text-align: center;
-    background-color: black;
-    color:white;
+    font-size:60vw;
+    line-height: 45vw;
+    text-align: left;
+    font-family: arial;
+    letter-spacing: -7vw;
+    
+    background-image: radial-gradient(white, black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 10px;
+    animation: grad 20s alternate infinite linear;
+}
+
+@keyframes grad {
+    0% {
+        background-size: 30px;
+    }
+
+    100% {
+        background-size: 40px;
+    }
 }
 
 div.about {
@@ -45,16 +63,25 @@ div.container {
     padding:20px;
 }
 
+div.items {
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+    gap: 20px;
+    row-gap: 80px;
+    align-items: flex-end;
+}
+
 div.item {
-    width: 25%;
+    width: calc(33.33% - 20px);
 }
 
 div.number {
-    font-size:30px;
+    font-size:10vw;
 }
 
-div.desciption {
-
+div.item img {
+    width: 100%;
 }
 
 div.col {
@@ -70,4 +97,13 @@ div.nav {
 
 div.w-1-2 {
     width: 50%;
+}
+
+div.footer {
+    margin-top:33vh;
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+    border-top:1px solid black;
+    color:black;
 }
