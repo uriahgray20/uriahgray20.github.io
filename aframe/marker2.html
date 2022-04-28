@@ -10,7 +10,17 @@
     <script src="js/aframe-html-shader.min.js"></script>
 
     <style>
-
+      .update {
+        position: fixed;
+        top:0;
+        left:0;
+        font-size: 20px;
+        font-family: arial;
+        color:red;
+      }
+      .a-canvas {
+        z-index: 10;
+      }
     </style>
   </head>
   <body>
@@ -36,10 +46,14 @@
     </a-scene>
 
     <!-- HTML to render as a material. -->
-    <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+    <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -2; overflow: hidden">
       <div id="planeHTML" style="background: linear-gradient(lime, red, blue); width: 500px; height: 200px; font-size: 64px; padding-top: 15px; color: #222; font-weight: 600; display: flex; align-items: center; text-align: center; border-radius: 200px">
         <p style="border: 1px #FFF">ARE YOU HUNGRY?</p>
       </div>
+    </div>
+
+    <div class="update">
+      v3
     </div>
 
   </body>
