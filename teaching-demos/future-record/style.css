@@ -1,12 +1,21 @@
 body {
-    font-family: arial;
+    font-family: 'arial narrow';
+    font-weight: bold;
     font-size: 21px;
+    color:orangered;
 }
 
+a {
+    color:orangered;
+}
 
+img {
+    width: 100%;
+    display: block;
+}
 
 div.button {
-    border-bottom:1px solid black;
+    border-bottom:1px solid orangered;
     margin-right:20px;
 }
 
@@ -17,17 +26,15 @@ div.logo {
 /* masthead */
 
 div.masthead {
-    font-size:60vw;
-    line-height: 45vw;
-    text-align: left;
-    font-family: arial;
-    letter-spacing: -7vw;
-    
-    background-image: radial-gradient(white, black, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 10px;
-    animation: grad 20s alternate infinite linear;
+    font-size: 16vw;
+    letter-spacing: -2vw;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+div.hero {
+    width: 50%;
+    margin: auto;
 }
 
 @keyframes grad {
@@ -42,17 +49,40 @@ div.masthead {
 
 div.about {
     font-family: serif;
-    font-size:4vw;
-    padding:20px;
+    letter-spacing: -0.2vw;
+    font-weight: normal;
+    font-size:3vw;
+    padding:20px; 
+}
+
+div.aboutsmall {
+    border-top: 1px solid orangered;
+    gap: 20px;
 }
 
 /* filter */
+div.title {
+    font-size:9vw;
+    letter-spacing: -0.5vw;
+    padding:20px;
+    text-align: center;
+}
+
+div.subtitle {
+    font-size:9vw;
+    letter-spacing: -0.5vw;
+    padding:20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 div.filter {
     display: flex;
     flex-wrap:wrap;
     padding:20px;
-    border-top: 1px solid black;
-    color:black;
+    border-top: 1px solid orangered;
+    color:orangered;
 }
 
 /* grid */
@@ -77,11 +107,15 @@ div.item {
 }
 
 div.number {
-    font-size:10vw;
+    font-size:9vw;
 }
 
 div.item img {
     width: 100%;
+}
+
+div.item.feature {
+    width: calc(66.66% - 20px);
 }
 
 div.col {
@@ -89,14 +123,18 @@ div.col {
 }
 
 div.nav {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
 }
 
 div.w-1-2 {
-    width: 50%;
+    width: calc(50% - 20px);
+}
+
+div.w-1-3 {
+    width: calc(33.33% - 20px);
 }
 
 div.footer {
@@ -104,6 +142,6 @@ div.footer {
     display: flex;
     flex-wrap:wrap;
     padding:20px;
-    border-top:1px solid black;
-    color:black;
+    border-top:1px solid orangered;
+    color:orangered;
 }
