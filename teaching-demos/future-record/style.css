@@ -2,11 +2,12 @@ body {
     font-family: 'arial narrow';
     font-weight: bold;
     font-size: 21px;
-    color:orangered;
+    color:blue;
+    background-color: rgb(240, 240, 240);
 }
 
 a {
-    color:orangered;
+    color:blue;
 }
 
 img {
@@ -15,7 +16,7 @@ img {
 }
 
 div.button {
-    border-bottom:1px solid orangered;
+    border-bottom:1px solid blue;
     margin-right:20px;
 }
 
@@ -58,8 +59,12 @@ div.about {
     padding:20px; 
 }
 
+div.aboutcenter {
+    text-align: center;
+}
+
 div.aboutsmall {
-    border-top: 1px solid orangered;
+    border-top: 1px solid blue;
     gap: 20px;
 }
 
@@ -80,7 +85,7 @@ div.title {
 div.title.script {
     font-family: cursive;
     letter-spacing: -0.5vw;
-    color:orangered;
+    color:blue;
     font-weight: normal;
 }
 
@@ -104,8 +109,8 @@ div.filter {
     display: flex;
     flex-wrap:wrap;
     padding:20px;
-    border-top: 1px solid orangered;
-    color:orangered;
+    border-top: 1px solid blue;
+    color:blue;
 }
 
 /* grid */
@@ -165,6 +170,6 @@ div.footer {
     display: flex;
     flex-wrap:wrap;
     padding:20px;
-    border-top:1px solid orangered;
-    color:orangered;
+    border-top:1px solid blue;
+    color:blue;
 }
