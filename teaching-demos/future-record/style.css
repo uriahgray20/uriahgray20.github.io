@@ -79,6 +79,7 @@ div.title {
 
 div.title.script {
     font-family: cursive;
+    letter-spacing: -0.5vw;
     color:orangered;
     font-weight: normal;
 }
