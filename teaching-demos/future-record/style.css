@@ -26,15 +26,18 @@ div.logo {
 /* masthead */
 
 div.masthead {
-    font-size: 16vw;
-    letter-spacing: -2vw;
+    font-size:9vw;
+    text-align: center;
+    letter-spacing: -0.5vw;
     padding: 20px;
     margin-top: 20px;
 }
 
 div.hero {
     width: 50%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
 }
 
 @keyframes grad {
@@ -62,10 +65,29 @@ div.aboutsmall {
 
 /* filter */
 div.title {
-    font-size:9vw;
+    font-size:10vw;
     letter-spacing: -0.5vw;
-    padding:20px;
     text-align: center;
+    position: sticky;
+    top:60px;
+    left:0;
+    width: 100%;
+    font-family: Impact;
+    color:black;
+    font-weight: normal;    
+}
+
+div.title.script {
+    font-family: cursive;
+    color:orangered;
+    font-weight: normal;
+}
+
+div.title.blocky {
+    font-family: Impact;
+    color:black;
+    font-weight: normal;
+    color:gray;
 }
 
 div.subtitle {
