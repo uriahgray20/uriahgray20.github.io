@@ -16,6 +16,10 @@ img {
     width:100%;
 }
 
+video {
+    width: 100%;
+}
+
 div.header {
    display:flex;
    flex-wrap:wrap;
@@ -25,7 +29,10 @@ div.header {
    left:0;
    width:100%;
    background-color:white;
+   z-index: 9;
 }
+
+/* add higher z-index: 9; on anything positioned fixed to make it appear above the video */
 
 div.header a {
     color:blue;
@@ -47,8 +54,25 @@ div.nav {
 }
 
 div.masthead {
-    font-size:70vw;
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    mix-blend-mode: difference;
+    pointer-events: none;
 }
+
+div.flying {
+    height:100%;
+}
+
+
+div.flying video {
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 div.about {
     padding:20px;
