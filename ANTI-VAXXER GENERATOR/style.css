@@ -1,0 +1,237 @@
+/* *{
+    outline: 1px solid cyan;
+} */
+
+/* third widths */
+
+div.w1-3{
+    width: 33.333%;
+}
+
+div.w2-3{
+    width: 66.666%;
+}
+
+/* half widths */
+
+div.w1-2{
+    width:50%
+}
+
+/* quater widths */
+
+div.w1-4{
+    width: 25%;
+}
+
+div.w3-4{
+    width: 75%;
+}
+
+/* full widths */
+
+div.w1-1{
+    width: 100%;
+}
+
+body{
+    background-color:rgb(255, 255, 255); 
+}
+
+div.sections{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.poster{
+    background-color: rgb(0, 0, 0);
+    height: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+}
+
+div.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.col{
+    overflow: hidden;
+}
+
+div.update{
+    transition:0.5s; 
+    height: 13.333vw;
+}
+
+div.header{
+    font-size: 50px;
+    height: 100px;
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+DIV.SUB{
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: monospace;
+    text-align: center;
+    color: black;
+}
+
+div.interactive{
+    background-color: white;
+}
+
+
+div.button {
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 15vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 1vw;
+}
+
+div.button:hover{
+    color:rgb(255, 255, 255);
+    box-shadow: inset -10px -5px 20px rgb(0, 0, 0);
+}
+
+/* all rules one,two,three, a,b,c and x,y,z - HEAD */
+div.head.one{
+    background-image: url('head0.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.two{
+    background-image: url('head1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.three{
+    background-image: url('head2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.a{
+    background-image: url('head3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.b{
+    background-image: url('head4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.c{
+    background-image: url('head5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.x{
+    background-image: url('head6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.y{
+    background-image: url('head7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.head.z{
+    background-image: url('head8.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* all rules one,two,three, a,b,c and x,y,z - TORSO */
+div.head.one{
+    background-image: url('head0.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.two{
+    background-image: url('torso1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.three{
+    background-image: url('torso2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.a{
+    background-image: url('torso3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.b{
+    background-image: url('torso4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.c{
+    background-image: url('torso5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.x{
+    background-image: url('torso6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.y{
+    background-image: url('torso7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.torso.z{
+    background-image: url('torso8.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
