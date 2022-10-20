@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- download jquery from https://jquery.com/download/
+        save it to your main folder and link with script:src + tab -->
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div class="splash">
+        <div class="splash-message">
+            This website uses sound. For the best experience turn your volume up. <br>
+            (Click anywhere to close)
+        </div>
+    </div>
+
+    <!-- for each audio file with a class name -->
+    <audio src="track.mp3" class="track1"></audio>
+    <audio src="track2.mp3" class="track2"></audio>
+
+    <div class="message">
+        Hovering on the following divs will trigger an audio file
+    </div>
+
+    <div class="track1">
+        Track 1
+    </div>
+
+    <div class="track2">
+        Track 2
+    </div>
+
+    <div class="player">
+        Track 2 player
+        <div class="playtrack2">Play</div>
+        <div class="pausetrack2">Pause</div>
+    </div>
+    
+</body>
+</html>
