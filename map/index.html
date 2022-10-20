@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- download jquery from https://jquery.com/download/
+        save it to your main folder and link with script:src + tab -->
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <!-- The map is basically a flex container with a 
+        width of 300vw (300% of the users screen) 
+    
+        Then each mapBlock is 100vw and 100vh, or screen width X screen height
+        Creating a grid of squares the user can pan
+
+        You can create a mini website in each block but I 
+        would suggest making one and just repeating it
+
+        I have added overflow scroll inside the 100vh so it will scroll inside the block
+
+        Check the main javascript file for how to create more location buttons
+
+        Just note that position fixed wont work very well because your screen is now
+        massive
+
+        I also made it start at the center div and then wait 400ms to load the page
+    
+    -->
+    <div class="map">
+        <div class="mapBlock nw">
+          NW
+          <div class="btnSW">Go to the SE</div>
+        </div>
+        <div class="mapBlock n">
+          N
+          <div class="btnNW">Go to the NW</div>
+        </div>
+        <div class="mapBlock ne">
+          NE
+        </div>
+        <div class="mapBlock w">
+          W
+        </div>
+        <div class="mapBlock c">
+            <div class="grid">
+                <div class="col">C</div>
+                <div class="col">
+                    <div class="btnSW">Go to the SE</div>
+                </div>
+                <div class="col text">
+                    <div class="text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti, you could also make a <span class="btnNW btnlink">span button so it's inline</span> in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur beatae voluptatum itaque minus esse sed, mollitia dolorum, magnam quos deleniti in officiis unde voluptas eos fugit illum, voluptatibus autem.
+                      </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mapBlock e">
+          E
+        </div>
+        <div class="mapBlock sw">
+          SW
+        </div>
+        <div class="mapBlock s">
+          S
+        </div>
+        <div class="mapBlock se">
+          SE
+          <div class="btnN">Go to the N</div>
+        </div>
+      </div>
+
+</body>
+</html>
