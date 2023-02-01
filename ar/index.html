@@ -10,15 +10,8 @@
       </a-assets>
 
       <!-- <a-sky src="skybox.png"></a-sky> -->
-      <!-- <a-light type="ambient" color="#666"></a-light>
-      <a-light type="point" intensity="1" position="2 4 4"></a-light> -->
-
-      <a-entity light="type: ambient; intensity: 0.5;"></a-entity>
-      <a-entity light="type: directional;
-                       castShadow: true;
-                       intensity: 0.4;
-                       shadowCameraVisible: true;"
-                position="-5 3 1.5"></a-entity>
+      <a-light type="ambient" color="#666"></a-light>
+      <a-light type="point" intensity="1" position="2 4 4"></a-light>
 
 
 
@@ -33,11 +26,9 @@
         radius="0.5"
         height="1.5"
         src="sky.jpeg"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
-        shadow="cast: true"
+        animation="property: rotation; to: 180 360 0; loop: true; dur: 7000"
         >
         </a-cylinder>
-        <a-circle id="ground" radius="10" rotation="-90 0 0" shadow="receive: true"></a-circle>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
