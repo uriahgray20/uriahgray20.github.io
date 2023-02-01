@@ -11,7 +11,7 @@
 
       <!-- <a-sky src="skybox.png"></a-sky> -->
       <a-light type="ambient" color="#666"></a-light>
-      <a-light type="point" intensity="1" position="2 4 4"></a-light>
+      <a-light type="point" intensity="0" position="2 4 4"></a-light>
 
 
 
@@ -22,13 +22,30 @@
           rotation="3 3 3" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         /> -->
         <!-- <a-cylinder radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+
+        <!-- <a-cylinder
+        radius="0.5"
+        height="1.5"
+        src="sky.jpeg"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        >
+        </a-cylinder> -->
+
+
         <a-cylinder
         radius="0.5"
         height="1.5"
         src="sky.jpeg"
-        animation="property: rotation; to: 180 360 0; loop: true; dur: 7000"
         >
+          <a-animation 
+          attribute="rotation"
+          dur="3000"
+          to="0 360 0"
+          repeat="indefinite"
+          >
+          </a-animation>
         </a-cylinder>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
