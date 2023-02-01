@@ -8,6 +8,13 @@
       <a-assets>
         <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
       </a-assets>
+
+      <a-sky src=""></a-sky>
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+
+
       <a-marker type='pattern' url='pattern-bird.patt'>
         <!-- <a-image src="greendino.png"
           position= "0 1 0"
@@ -18,7 +25,7 @@
         <a-cylinder
         radius="0.5"
         height="1.5"
-        src="greendino.png"
+        src="sky.jpeg"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         >
         </a-cylinder>
