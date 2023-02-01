@@ -5,12 +5,16 @@
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
   <body>
     <a-scene embedded arjs>
+      <a-assets>
+        <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+      </a-assets>
       <a-marker type='pattern' url='pattern-bird.patt'>
-        <a-image src="greendino.png"
+        <!-- <a-image src="greendino.png"
           position= "0 1 0"
           scale= "1 1 1"
           rotation="3 3 3" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
-        />
+        /> -->
+        <a-entity gltf-model="#cityModel"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
