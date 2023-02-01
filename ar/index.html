@@ -31,28 +31,16 @@
         >
         </a-cylinder> -->
 
-
-        <a-cylinder
+        <a-box
         radius="0.5"
         height="1.5"
         src="sky.jpeg"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         >
-          <a-animation 
-          attribute="rotation"
-          dur="3000"
-          to="0 360 0"
-          repeat="indefinite"
-          >
-          </a-animation>
-          <a-animation 
-          attribute="position"
-          dur="3000"
-          from="0 0 0"
-          to="0 2 0"
-          repeat="indefinite"
-          >
-          </a-animation>          
-        </a-cylinder>
+        </a-box>
+
+
+
 
       </a-marker>
       <a-entity camera></a-entity>
