@@ -2,7 +2,6 @@
 <html>
   <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
   <body>
     <a-scene embedded arjs vr-mode-ui="enabled: false">
       <a-assets>
@@ -17,11 +16,11 @@
       </a-assets>
 
       <!-- <a-light type="ambient" color="#888"></a-light> -->
-      <a-light type="point" intensity="0.8" position="2 4 4"></a-light>
+      <a-light type="point" intensity="1.6" position="2 4 4"></a-light>
 
       <a-marker type='pattern' url='pattern-bird.patt'>
         
-        <a-cylinder
+        <!-- <a-cylinder
         radius="0.5"
         height="1.5"
         metalness="0.9"
@@ -31,8 +30,12 @@
         animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         >
 
-        </a-cylinder>
+        </a-cylinder> -->
 
+        <a-entity
+        geometry="primitive: box"
+        material="envMap: #sky; color:#fff; roughness: 0.3">
+       </a-entity>   
 
 
 
