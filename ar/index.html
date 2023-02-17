@@ -5,6 +5,16 @@
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
   <body>
     <a-scene embedded arjs vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-cubemap id="sky">
+          <img src="Daylight-Box_Right.jpg">
+          <img src="Daylight-Box_Left.jpg">
+          <img src="Daylight-Box_Top.jpg">
+          <img src="Daylight-Box_Bottom.jpg">
+          <img src="Daylight-Box_Front.jpg">
+          <img src="Daylight-Box_Back.jpg">
+        </a-cubemap>
+      </a-assets>
 
       <a-light type="ambient" color="#888"></a-light>
       <a-light type="point" intensity="0.3" position="2 4 4"></a-light>
@@ -16,6 +26,7 @@
         height="1.5"
         metalness="0.9"
         roughness="0.9"
+        envMap="#sky"
         src="sky.jpeg"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         >
