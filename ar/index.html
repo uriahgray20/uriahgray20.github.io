@@ -10,9 +10,14 @@
 
       <a-marker type='pattern' url='pattern-bird.patt'>
         
-        <a-torus-knot position="0 3 0" material="shader:phong; reflectivity: 0.9; shininess: 30;"
-        geometry="radius: 0.45; radiusTubular: 0.09">
-      </a-torus-knot>
+        <a-cylinder
+        radius="0.5"
+        height="1.5"
+        src="sky.jpeg"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        >
+
+        </a-cylinder>
 
 
 
