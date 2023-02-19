@@ -1,0 +1,261 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta charset="utf-8" />
+<title>asteroidsVR thumb controls</title>
+<meta name="description" content="play asteroids on a VR cabinet" >
+	<link rel="stylesheet" href="./asteroids/css/style.css">
+
+		
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	
+	<script src="./components/camera-cube-env.js"></script>
+
+	<link rel="stylesheet" href="./asteroids/css/style.css">
+	<script type="text/javascript" src="./asteroids/js/libs/class.js"></script>
+	<script type="text/javascript" src="./asteroids/js/state.js"></script>
+	<script type="text/javascript" src="./asteroids/js/points.js"></script>
+	<script type="text/javascript" src="./asteroids/js/audios.js"></script>
+	<script type="text/javascript" src="./asteroids/js/soundEffect.js"></script>
+	<script type="text/javascript" src="./asteroids/js/gameState.js"></script>
+	<script type="text/javascript" src="./asteroids/js/menuState.js"></script>
+	<script type="text/javascript" src="./asteroids/js/endState.js"></script>
+	<script type="text/javascript" src="./asteroids/js/input.js"></script>
+	<script type="text/javascript" src="./asteroids/js/polygon.js"></script>
+	<script type="text/javascript" src="./asteroids/js/asteroid.js"></script>
+	<script type="text/javascript" src="./asteroids/js/debris.js"></script>
+	<script type="text/javascript" src="./asteroids/js/ship.js"></script>
+	<script type="text/javascript" src="./asteroids/js/bullet.js"></script>
+	<script type="text/javascript" src="./asteroids/js/canvas.js"></script>
+	<script type="text/javascript" src="./asteroids/js/main.js"></script>
+	
+	<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+	<script src="./components/aframe-teleport-controls.js"></script>
+	<script src="./components/aframe-thumb-controls-component.min.js"></script>
+	
+</head>
+<body class="a-body ">
+
+<input type="text" id="namefield">
+
+<script>
+	var game = new Game();
+	game.run();
+</script>
+
+<script>
+	// set up mapping of events for input-mapping component.
+	  
+	//---------------------------------------------------------------
+	// code to bind keyEvents to other events
+	// this is a hack to inject control by VR control into
+	// html5 keyboard canvas games that use keyboard events.
+	//---------------------------------------------------------------
+	keySim = {};
+	keySim.keydown = function(k) {
+		var oEvent = document.createEvent('KeyboardEvent');
+
+			// Chromium Hack
+			Object.defineProperty(oEvent, 'keyCode', {
+				get : function() {
+					return this.keyCodeVal;
+				}
+			});     
+			Object.defineProperty(oEvent, 'which', {
+				get : function() {
+					return this.keyCodeVal;
+				}
+			});     
+
+			if (oEvent.initKeyboardEvent) {
+				oEvent.initKeyboardEvent("keydown", true, true, document.defaultView, false, false, false, false, k, k);
+			} else {
+				oEvent.initKeyEvent("keydown", true, true, document.defaultView, false, false, false, false, k, 0);
+			}
+
+			oEvent.keyCodeVal = k;
+
+			if (oEvent.keyCode !== k) {
+				alert("keyCode mismatch " + oEvent.keyCode + "(" + oEvent.which + ")");
+			}
+
+			document.dispatchEvent(oEvent);
+		}
+			
+		// keyup
+			
+		keySim.keyup = function(k) {
+			var oEvent2 = document.createEvent('KeyboardEvent');
+
+				// Chromium Hack
+				Object.defineProperty(oEvent2, 'keyCode', {
+					get : function() {
+						return this.keyCodeVal;
+					}
+				});     
+				Object.defineProperty(oEvent2, 'which', {
+					get : function() {
+						return this.keyCodeVal;
+					}
+				});     
+
+				if (oEvent2.initKeyboardEvent) {
+					oEvent2.initKeyboardEvent("keyup", true, true, document.defaultView, false, false, false, false, k, k);
+				} else {
+					oEvent2.initKeyEvent("keyup", true, true, document.defaultView, false, false, false, false, k, 0);
+				}
+
+			oEvent2.keyCodeVal = k;
+
+			if (oEvent2.keyCode !== k) {
+				alert("keyCode mismatch " + oEvent2.keyCode + "(" + oEvent2.which + ")");
+			}
+
+			document.dispatchEvent(oEvent2);
+		}
+		
+		// event handlers for controllers below
+		// keys : spacebar = 32, left = 74, right = 76, up = 73, down = 77, enter = 13
+		//
+		
+		
+			document.addEventListener('thumbleftstart', function (evt) {
+				keySim.keydown(74);
+			});
+			document.addEventListener('thumbleftend', function (evt) {
+				keySim.keyup(74);
+			});
+			document.addEventListener('thumbrightstart', function (evt) {
+				keySim.keydown(76);
+			});
+			document.addEventListener('thumbrightend', function (evt) {
+				keySim.keyup(76);
+			});
+			document.addEventListener('thumbupstart', function (evt) {
+				keySim.keydown(73);
+			});
+			document.addEventListener('thumbupend', function (evt) {
+				keySim.keyup(73);
+			});
+			document.addEventListener('thumbdownstart', function (evt) {
+				keySim.keydown(77);
+			});
+			document.addEventListener('thumbdownend', function (evt) {
+				keySim.keyup(77);
+			});	
+
+
+		
+		AFRAME.registerComponent('y-button-listener', {
+			init: function () {
+				var el = this.el;
+				el.addEventListener('ybuttondown', function (evt) {
+					keySim.keydown(13);
+				});
+				el.addEventListener('ybuttonup', function (evt) {
+					keySim.keyup(13);
+				});
+			}
+		});
+		
+		AFRAME.registerComponent('a-button-listener', {
+			init: function () {
+				var el = this.el;
+				el.addEventListener('abuttondown', function (evt) {
+					keySim.keydown(32);
+				});
+				el.addEventListener('abuttonup', function (evt) {
+					keySim.keyup(32);
+				});
+			}
+		});
+		
+		AFRAME.registerComponent('b-button-listener', {
+			init: function () {
+				var el = this.el;
+				el.addEventListener('bbuttondown', function (evt) {
+					keySim.keydown(13);
+				});
+				el.addEventListener('bbuttonup', function (evt) {
+					keySim.keyup(13);
+				});
+			}
+		});
+		
+		AFRAME.registerComponent('x-button-listener', {
+			init: function () {
+				var el = this.el;
+				el.addEventListener('gripdown', function (evt) {
+					keySim.keydown(32);
+				});
+				el.addEventListener('gripup', function (evt) {
+					keySim.keyup(32);
+				});
+			}
+		});
+
+		AFRAME.registerComponent('canvas-updater', {
+
+          tick: function () {
+	      var el = this.el;
+	      var material;
+
+	      material = el.getObject3D('mesh').material;
+	      if (!material.map) { return; }
+              material.map.needsUpdate = true;
+          }
+      });
+			
+</script>
+		
+<a-scene background="color:#5f5f5f" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui="" shadow="autoUpdate: true; type:pcfsoft">
+
+<a-assets>
+	<img id="sky" src="./textures/sky.jpg">
+	
+	<a-asset-item id="cabinet" src="./asteroids/AsteroidsCabinetMerged.glb"></a-asset-item>
+	<a-asset-item id="screen" src="./asteroids/Screen1.obj"></a-asset-item>
+
+</a-assets>
+
+<a-sky src="#sky" material="" geometry="" rotation="0 90 0"></a-sky>
+
+<a-entity id="AsteroidsCabinet" position="-3.09 0 -3">
+	<a-entity gltf-model="#cabinet" camera-cube-env="resolution:256; interval: 1000" shadow="" position="0 0 0" scale="1 1 1"></a-entity>
+
+	<a-entity obj-model="obj:#screen" position="0 0 0" scale="0.01 0.01 0.01" id="gamescreen" material="src:#asteroids; shader:flat" canvas-updater=""></a-entity>
+	
+</a-entity>
+
+
+<a-plane id="floor" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"  material="" geometry="" scale="100 100 1" shadow="cast:false; receive: true"></a-plane>
+
+ 
+ 
+ <a-entity position="-6.615488226501929 6.075291694641248 3.45" id="spotlight" light="castShadow:true;target:#AsteroidsCabinet;angle:0;shadowCameraFov:40;shadowCameraFar:492.95;shadowCameraTop:10;shadowCameraRight:10;shadowCameraBottom:-10;shadowCameraLeft:-10"></a-entity>
+ 
+ <a-entity light="type:hemisphere;groundColor:#4a4137;color:#ceeaf7;angle:0;distance:100;decay:0;intensity:0.5" rotation="0 0 0.01" visible=""></a-entity>
+
+ <a-entity id="rig" movement-controls="controls: keyboard, touch; speed: 0.1" position="0 0 0">
+        <a-entity id="head" camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
+        <a-entity teleport-controls="cameraRig: #rig; button: trigger;"
+          vive-controls="hand: left"
+          oculus-touch-controls="hand: left"
+          microsoft-motion-controls="hand: left"
+          daydream-controls="left" gearvr-controls="left"
+		  thumb-controls="hand: left"
+		  grip-listener x-button-listener y-button-listener>
+        </a-entity>
+        <a-entity teleport-controls="cameraRig: #rig; button: trigger;"
+          vive-controls="hand: right"
+          microsoft-motion-controls="hand: right"
+          oculus-touch-controls="hand: right"
+          daydream-controls="right" gearvr-controls="right"
+		  thumb-controls="hand: right"
+		  grip-listener a-button-listener b-button-listener>
+        </a-entity>
+  </a-entity>
+
+</a-scene>
+
+
+</body></html>

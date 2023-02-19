@@ -1,0 +1,227 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta charset="utf-8" />
+<title>The Parthenon Project</title>
+<meta name="description" content="Exploring the Parthenon and the Acropolis in XR" />
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="./components/camera-cube-env.js"></script>
+<style>
+	html {
+        font-size: 14px;
+    }
+	body {
+		font: 400 1.1rem/1.6 Fira Sans,Helvetica,Arial,sans-serif;
+	}
+	ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+	aside {
+		display: block;
+		width: 30%;
+		height: 100%;
+		max-width: 400px;
+		min-width: 300px;
+		margin-left: 0px;
+		background: #efa42d;
+		overflow-x: hidden;
+	}
+	#sideBar {
+		display: block;
+		padding: 2rem;
+		overflow-y: auto;
+	}
+	
+	#Title {
+		font-size: 2.3rem;
+		color: #FFFFFF;
+		line-height: 110%;
+		margin-bottom: 3rem;
+	}
+	
+	#subTitle {
+		font-size: 1.3rem;
+		color: rgb(180 70 10);
+		line-height: 110%;
+		text-transform: uppercase;
+	}
+	
+	.button {
+		font-size: 1.1rem;
+		color: #000000;
+		padding: .5rem, .5rem, .5rem, .5rem;
+		height: 2rem;
+		margin-left: -.4rem;
+	}
+	
+	.button:hover {
+		font-size: 1.1rem;
+		color: #FFFFFF;
+		background-color: rgb(230 135 40);
+		cursor: pointer;
+	}
+	
+	#content {
+		display: block;
+		width: 80%;
+		Height: 100%;
+	}
+	
+	#exampleIframe {
+		border: 0px;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	#main {
+		display: flex;
+		height: 100%;
+	}
+	a {
+		height: 2rem;
+		padding: .5rem;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	#description {
+		color: #ffffff;
+	}
+	#description1 {
+		color: #ffffff;
+	}
+	.descriptions {
+		color: #ffffff;
+		margin-left: 1rem;
+		margin-right: 3rem;
+	}
+	.youtubeLink {
+		font-size: 1.2rem;
+		color: rgb(180 70 10);
+		cursor: pointer;
+		text-transform: capitalize;
+		margin-left: -.5rem;
+	}
+	.youtubeLink:hover {
+		color: #000000;
+		background-color: #efa42d;
+	}
+	
+	li {
+		padding-bottom: .5rem;
+	}
+	
+	@media only screen and (max-width: 1000px) {
+		aside {
+			width: 20%;
+			height: 100%;
+			max-width: 350px;
+			min-width: 250px;
+		}
+		#sideBar {
+			padding: 2rem;
+		}
+        #Title {
+			font-size: 1.5rem;
+			color: #FFFFFF;
+			line-height: 100%;
+			margin-bottom: 2rem;
+		}
+		#subTitle {
+			font-size: 1.1rem;
+			line-height: 100%;
+			text-transform: uppercase;
+		}
+        .button {
+			font-size: .9rem;
+			color: #000000;
+			padding: .3rem, .3rem, .3rem, .3rem;
+			height: 1.5rem;
+			margin-left: -.2rem;
+		}
+	
+		.button:hover {
+			font-size: .9rem;
+
+		}
+		a {
+			height: 1.5rem;
+			padding: .3rem;
+		}
+		.descriptions {
+			font-size: .9rem;
+			margin-left: .5rem;
+			margin-right: 1.5rem;
+		}
+		.youtubeLink {
+			font-size: .9rem;
+			margin-left: -.2rem;
+		}
+      }
+
+</style>
+</head>
+<body class="a-body ">
+<script>
+	
+	function loadExample(myURL) {
+		document.getElementById("exampleIframe").src = myURL;
+		if(myURL == 'https://colinfizgig.github.io/aframe_Components/Cube_Camera_Environment_Reflect.html'){
+				document.getElementById('description').innerHTML = "This is a example of a my cubecamera component which attaches a three.js cubeCamera to a reflective object and loads the texture from that camera as a cube environment map for reflection.  For a tutorial on how it works and why it's useful check out </br></br><a class='youtubeLink' href='https://www.youtube.com/watch?v=Qkdq9JxSogg'>Aframe Materials Tutorial</a></br></br>";
+				document.getElementById('description1').innerHTML = '';
+				document.getElementById('description2').innerHTML = '';
+				document.getElementById('description3').innerHTML = '';
+			}else if(myURL == 'https://colinfizgig.github.io/aframe_Components/Cube_Camera_Environment_Refract.html'){
+				document.getElementById('description1').innerHTML = "This is a example of a my cubecamera component which attaches a three.js cubeCamera to a refractive object and loads the texture from that camera as a cube environment refraction map.  This is useful for simulating transparent objects with refraction that warps the transparent image.  Play with setting the refraction ratio lower or higher to create more or less distortion.  Setting the roughness property on the material will make the object seem opaque and blurry like a marble</br></br>";
+				document.getElementById('description').innerHTML = '';
+				document.getElementById('description3').innerHTML = '';
+				document.getElementById('description2').innerHTML = '';
+			}else if(myURL == 'https://colinfizgig.github.io/aframe_Components/lightTest.html'){
+				document.getElementById('description2').innerHTML = "This is a example of a my light map component which attaches a baked light map to the standard material light map in aframe.  This is not exposed in the material interface and requires a second set of UVs on the object.  For a tutorial on how it works and why it's useful check out </br></br><a class='youtubeLink' href='https://www.youtube.com/watch?v=G0M4OBThID8'>Baked Lighting Tutorial</a></br></br>";
+				document.getElementById('description').innerHTML = '';
+				document.getElementById('description1').innerHTML = '';
+				document.getElementById('description3').innerHTML = '';
+			}else if(myURL == 'https://colinfizgig.github.io/aframe_Components/Arcade_Merged.html'){
+				document.getElementById('description3').innerHTML = "This is a example using an HTML5 canvas as a texture.  To play the asteroids game hit the space bar on your computer and use the 'J','I','L' and 'M' KEYS to navigate the ship.  Use the 'SPACE BAR' to fire at the asteroids.  I'm working on a tutorial which shows ways to speed up peformance of this type of interactive texture in WebGL.  For best performance use the Chrome browser which seems to render the tag with less overhead than Firefox. </br></br>";
+				document.getElementById('description').innerHTML = '';
+				document.getElementById('description1').innerHTML = '';
+				document.getElementById('description2').innerHTML = '';
+			}
+	}
+</script>
+<div id="main">
+	<aside>
+		<div id="sideBar">
+			<div id="Title">Colin's</br>Aframe</br>Components</br></div>
+			<div id="subTitle">Examples</br></div>
+			</br>
+			<div>
+				<ul class="links">
+					<li>
+					<div class="button"><a onclick="loadExample('https://colinfizgig.github.io/aframe_Components/Cube_Camera_Environment_Reflect.html')">Camera Cube Reflect</a></div>
+					<div id="description" class="descriptions"></div>
+					</li>
+					<li>
+					<div class="button"><a onclick="loadExample('https://colinfizgig.github.io/aframe_Components/Cube_Camera_Environment_Refract.html')">Camera Cube Refract</a></div>
+					<div id="description1" class="descriptions"></div>
+					</li>
+					<li>
+					<div class="button"><a onclick="loadExample('https://colinfizgig.github.io/aframe_Components/lightTest.html')">Baked Light Mapping</a></div>
+					<div id="description2" class="descriptions"></div>
+					</li>
+					<li>
+					<div class="button"><a onclick="loadExample('https://colinfizgig.github.io/aframe_Components/Arcade_Merged.html')">Interactive Canvas Texture</a></div>
+					<div id="description3" class="descriptions"></div>
+					</li>
+					</br>
+				</ul>
+		
+			</div>
+	</aside>
+	<div id="content">
+	<iframe id="exampleIframe" class="example__iframe" width="100%" height="100%" allowfullscreen="yes" scrolling="no" allowvr="yes" src="./Cube_Camera_Environment_Reflect.html"></iframe>
+	</div>
+</div>
+
+</body></html>
