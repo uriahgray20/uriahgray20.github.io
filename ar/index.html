@@ -31,6 +31,26 @@
         /> -->
         <!-- <a-cylinder radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
 
+        <a-box
+        width="0.5"
+        height="1.5"
+        depth="0.2"
+        position= "3 0 0"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"
+        src="sky.jpeg"
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"        
+        >
+
+        </a-box>
+
         <a-sphere
         radius="0.5"
         height="1.5"
