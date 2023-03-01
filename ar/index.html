@@ -31,13 +31,24 @@
         /> -->
         <!-- <a-cylinder radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
 
-        <!-- <a-cylinder
+        <a-sphere
         radius="0.5"
         height="1.5"
+        position= "0 1 0"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"
         src="sky.jpeg"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"
         >
-        </a-cylinder> -->
+        </a-sphere>
+
 
         <a-cylinder
         radius="0.5"
@@ -46,7 +57,13 @@
         metalness="1.0"
         roughness="0.0"
         src="sky.jpeg"
-        animation="property: rotation; from: 0 0 0; to: 0 360 0; easing: linear; dur: 10000; loop:true"
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"
         >
         </a-cylinder>
 
