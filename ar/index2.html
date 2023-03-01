@@ -4,9 +4,17 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
   <body>
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs environment="#env" vr-mode-ui="enabled: false">
       <a-assets>
-        <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+        <a-cubemap id="env">
+          <img src="Daylight-Box_Right.jpg">
+          <img src="Daylight-Box_Left.jpg">
+          <img src="Daylight-Box_Top.jpg">
+          <img src="Daylight-Box_Bottom.jpg">
+          <img src="Daylight-Box_Front.jpg">
+          <img src="Daylight-Box_Back.jpg">
+
+        </a-cubemap>
       </a-assets>
 
       <!-- <a-sky src="skybox.png"></a-sky> -->
@@ -23,19 +31,39 @@
         /> -->
         <!-- <a-cylinder radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
 
-        <!-- <a-cylinder
+        <a-sphere
         radius="0.5"
         height="1.5"
+        position= "0 1 0"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"
         src="sky.jpeg"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"
         >
-        </a-cylinder> -->
+        </a-sphere>
+
 
         <a-cylinder
         radius="0.5"
         height="1.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"
         src="sky.jpeg"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"
         >
         </a-cylinder>
 
