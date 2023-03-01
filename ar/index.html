@@ -2,40 +2,54 @@
 <html>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
   <body>
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs environment="#env" vr-mode-ui="enabled: false">
       <a-assets>
-        <a-cubemap id="sky">
+        <a-cubemap id="env">
           <img src="Daylight-Box_Right.jpg">
           <img src="Daylight-Box_Left.jpg">
           <img src="Daylight-Box_Top.jpg">
           <img src="Daylight-Box_Bottom.jpg">
           <img src="Daylight-Box_Front.jpg">
           <img src="Daylight-Box_Back.jpg">
+
         </a-cubemap>
       </a-assets>
 
-      <!-- <a-light type="ambient" color="#888"></a-light> -->
-      <a-light type="point" intensity="1.6" position="2 4 4"></a-light>
+      <!-- <a-sky src="skybox.png"></a-sky> -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="point" intensity="0.3" position="2 4 4"></a-light>
+
+
 
       <a-marker type='pattern' url='pattern-bird.patt'>
-        
+        <!-- <a-image src="greendino.png"
+          position= "0 1 0"
+          scale= "1 1 1"
+          rotation="3 3 3" animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+        /> -->
+        <!-- <a-cylinder radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+
         <!-- <a-cylinder
         radius="0.5"
         height="1.5"
-        metalness="0.9"
-        roughness="0.9"
-        envMap="#sky"
         src="sky.jpeg"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
         >
-
         </a-cylinder> -->
 
-        <a-entity
-        geometry="primitive: box"
-        material="envMap: #sky; color:#fff; roughness: 0.3">
-       </a-entity>   
+        <a-cylinder
+        radius="0.5"
+        height="1.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"
+        src="sky.jpeg"
+        animation="property: rotation; from: 0 0 0; to: 0 360 0; easing: linear; dur: 10000; loop:true"
+        >
+        </a-cylinder>
+
 
 
 
