@@ -13,7 +13,6 @@
           <img src="Daylight-Box_Bottom.jpg">
           <img src="Daylight-Box_Front.jpg">
           <img src="Daylight-Box_Back.jpg">
-
         </a-cubemap>
       </a-assets>
 
@@ -35,7 +34,7 @@
         width="0.8"
         height="1.5"
         depth="0.05"
-        position= "2 0 0"
+        position= "1 0 0"
         env-map="#env"
         metalness="1.0"
         roughness="0.0"
@@ -59,6 +58,13 @@
         roughness="0.0"
         src="sky.jpeg"
         animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"                
+        animation__2="
         property: position; 
         from: 0 0 0; 
         to: 0 1 0; 
