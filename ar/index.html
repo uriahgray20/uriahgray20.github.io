@@ -14,6 +14,10 @@
           <img src="Daylight-Box_Front.jpg">
           <img src="Daylight-Box_Back.jpg">
         </a-cubemap>
+
+        <img id="tex3" 
+        src="https://cdn.glitch.com/7de10cad-38fc-4f8e-a500-fbb2e63da6e9%2Fchecker8.png?v=1567014034775">
+
       </a-assets>
 
       <!-- <a-sky src="skybox.png"></a-sky> -->
@@ -81,6 +85,26 @@
 
 
 
+
+      </a-marker>
+
+      <a-marker type='pattern' url='pattern-marker-checker.patt' smooth="true">
+        <a-cone 
+        height="1.5"
+        radius-bottom="0.5"
+        radius-top="0"            
+        position="0 1 0" 
+        rotation="0 45 0"               
+        src="#tex3"
+        animation="
+        property: rotation; 
+        from: 360 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"               
+        >                 
+        </a-cone> 
 
       </a-marker>
 
