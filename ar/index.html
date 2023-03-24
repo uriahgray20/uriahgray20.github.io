@@ -25,23 +25,93 @@
       <a-light type="point" intensity="0.3" position="2 4 4"></a-light>
 
 
-
+      <!-- Multi asset one marker -->
       <a-marker type='pattern' url='pattern-marker4562.patt' smooth="true">
 
-        <a-box
-        width="11.25"
-        height="15.75"
-        depth="0.05"
+        <a-box 
+        width="1.2"
+        height="1.7"
+        depth="0.1"
         position="0 0 0" 
-        rotation="90 0 0"               
-        src="numbers.png"
+        rotation="0 45 0"               
+        src="a1.png"
         transparent="true"
         alphaTest= "0.5"
         env-map="#env"
         metalness="1.0"
-        roughness="0.0"          
-        >
-        </a-box>
+        roughness="0.0"                  
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"               
+        >                 
+  </a-box>
+ 
+    <a-box 
+        width="1.4"
+        height="2.3"
+        depth="0.1"
+        position="0.5 0 0" 
+        rotation="0 45 0"               
+        src="a2.png"
+        transparent="true"
+        alphaTest= "0.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"                  
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 5000; 
+        loop:true"               
+        >                 
+  </a-box>
+ 
+      <a-box 
+        width="1.4"
+        height="2.3"
+        depth="0.1"
+        position="1 0 0.5" 
+        rotation="0 45 0"               
+        src="a3.png"
+        transparent="true"
+        alphaTest= "0.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"                  
+        animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 5000; 
+        loop:true"               
+        >                 
+  </a-box>
+ 
+<!--  Try changing the metalness to 0.2 and the roughness to 0.0  -->
+ 
+   <a-sphere
+         radius="0.8"
+         position= "3 0 0"
+         src="a4.png"
+         env-map="#env"
+         metalness="0.9"
+         roughness="0.1"                  
+         animation="
+          property: rotation; 
+          from: 0 0 0; 
+          to: 0 360 0; 
+          easing: linear; 
+          dur: 10000; 
+          loop:true"
+           >                  
+   </a-sphere>        
 
 
 
