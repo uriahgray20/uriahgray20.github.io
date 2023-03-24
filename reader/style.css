@@ -1,0 +1,20 @@
+body {
+    background-color: darkseagreen;
+    font-family:arial;
+}
+
+@font-face {
+    font-family: "outward";
+    src: url("outward-block.woff");
+}
+
+@font-face {
+    font-family:"display";
+    src: url("Bourrasque-45Est.otf");
+}
+
+h1 {
+    font-family:"slanted";
+    font-size:300px;
+    letter-spacing: 3px;
+}
