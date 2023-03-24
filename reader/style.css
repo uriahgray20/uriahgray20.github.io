@@ -9,12 +9,16 @@ body {
 }
 
 @font-face {
-    font-family:"display";
-    src: url("./Bourrasque-45Est.otf");
-}
+    font-family: 'slanted';
+    src:  url('Bourrasque-45Est.otf') format('opentype');
+  }
 
 h1 {
     font-family:"slanted";
     font-size:300px;
     letter-spacing: 3px;
+}
+
+div.title {
+    font-family:"slanted";
 }
