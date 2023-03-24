@@ -5,8 +5,9 @@ body {
 
 @font-face {
     font-family: "outward";
-    src: url("./outward-block.woff");
+    src: url("outward-block.woff") format('woff');
 }
+
 
 @font-face {
     font-family: 'slanted';
