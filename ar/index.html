@@ -50,24 +50,39 @@
 
           <a-marker type='pattern' url='pattern-marker4562.patt' smooth="true">
 
-            <a-sphere
-            radius="0.8"
-            position= "0 0.5 0"
-            src="sky.jpeg"
+            <a-box
+            width="7"
+            height="5.5"
+            depth="0.4"
+            position="0 0.2 0" 
+            rotation="65 10 0"               
+            src="numbers.png"
+            transparent="true"
+            alphaTest= "0.5"            
             env-map="#env"
-            metalness="0.9"
-            roughness="0.1"                  
-            animation="
-             property: rotation; 
-             from: 0 0 0; 
-             to: 0 360 0; 
-             easing: linear; 
-             dur: 10000; 
-             loop:true"
-              >                  
-            </a-sphere>
+            metalness="1.0"
+            roughness="0.0"          
+            >
+            </a-box>
     
-          </a-marker>          
+          </a-marker>
+          
+          <a-sphere
+          radius="0.8"
+          position= "0 0.5 0"
+          src="sky.jpeg"
+          env-map="#env"
+          metalness="0.9"
+          roughness="0.1"                  
+          animation="
+           property: rotation; 
+           from: 0 0 0; 
+           to: 0 360 0; 
+           easing: linear; 
+           dur: 10000; 
+           loop:true"
+            >                  
+          </a-sphere>          
 
         <!-- !!! Do not remove Marker 1 !!! -->
       </a-marker>    
