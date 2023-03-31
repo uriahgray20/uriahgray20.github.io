@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+  <body>
+    <a-scene embedded arjs environment="#env" vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-cubemap id="env">
+          <img src="Daylight-Box_Right.jpg">
+          <img src="Daylight-Box_Left.jpg">
+          <img src="Daylight-Box_Top.jpg">
+          <img src="Daylight-Box_Bottom.jpg">
+          <img src="Daylight-Box_Front.jpg">
+          <img src="Daylight-Box_Back.jpg">
+        </a-cubemap>
+
+        <img id="tex3" 
+        src="https://cdn.glitch.com/7de10cad-38fc-4f8e-a500-fbb2e63da6e9%2Fchecker8.png?v=1567014034775">
+
+      </a-assets>
+
+      <!-- <a-sky src="skybox.png"></a-sky> -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="point" intensity="0.3" position="2 4 4"></a-light>
+
+
+      <!-- large scale overlay poster -->
+
+      <!-- <a-marker type='pattern' url='pattern-marker4562.patt' smooth="true">
+
+        <a-box
+        width="11"
+        height="14.9"
+        depth="0.05"
+        position="0 0 0" 
+        rotation="90 0 0"               
+        src="overlay.PNG"
+        transparent="true"
+        alphaTest= "0.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"          
+        >
+        </a-box>
+
+
+
+
+
+      </a-marker>      -->
+      
+      <!-- large scale overlay poster v2 -->
+
+      <a-marker type='pattern' url='pattern-marker4562.patt' smooth="true">
+
+        <a-box
+        width="7"
+        height="5.5"
+        depth="0.4"
+        position="0 0.2 0" 
+        rotation="65 10 0"               
+        src="iphone.png"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"          
+        >
+        </a-box>
+
+      </a-marker>           
+
+      <!-- Stacking type test -->
+
+      <a-marker type='pattern' url='pattern-marker-circle.patt' smooth="true">
+
+        <a-box
+        width="7.8"
+        height="5.6"
+        depth="0.05"
+        position="0 0 0" 
+        rotation="90 0 0"               
+        src="type1.png"
+        transparent="true"
+        alphaTest= "0.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"          
+        >
+        </a-box>
+
+        <a-box
+        width="7.8"
+        height="5.6"
+        depth="0.05"
+        position="0 3 0" 
+        rotation="90 0 0"               
+        src="type2.png"
+        transparent="true"
+        alphaTest= "0.5"
+        env-map="#env"
+        metalness="1.0"
+        roughness="0.0"          
+        >
+        </a-box>        
+
+
+
+
+
+      </a-marker>
+
+      <!-- multiple assets -->
+
+     <!-- Multi asset one marker -->
+     <a-marker type='pattern' url='pattern-marker-checkers.patt' smooth="true">
+
+      <a-box 
+      width="2.1"
+      height="3.45"
+      depth="0.1"
+      position="0 0 0" 
+      rotation="0 45 0"               
+      src="a1.png"
+      transparent="true"
+      alphaTest= "0.5"
+      env-map="#env"
+      metalness="1.0"
+      roughness="0.0"                  
+      animation="
+      property: rotation; 
+      from: 0 0 0; 
+      to: 0 360 0; 
+      easing: linear; 
+      dur: 10000; 
+      loop:true"               
+      >                 
+</a-box>
+
+  <a-box 
+      width="2.1"
+      height="3.45"
+      depth="0.1"
+      position="2 0 -4" 
+      rotation="0 45 0"               
+      src="a2.png"
+      transparent="true"
+      alphaTest= "0.5"
+      env-map="#env"
+      metalness="1.0"
+      roughness="0.0"                  
+      animation="
+      property: rotation; 
+      from: 0 0 0; 
+      to: 0 360 0; 
+      easing: linear; 
+      dur: 5000; 
+      loop:true"               
+      >                 
+</a-box>
+
+    <a-box 
+      width="2.1"
+      height="3.45"
+      depth="0.1"
+      position="-2 0 2" 
+      rotation="0 45 0"               
+      src="a3.png"
+      transparent="true"
+      alphaTest= "0.5"
+      env-map="#env"
+      metalness="1.0"
+      roughness="0.0"                  
+      animation="
+      property: rotation; 
+      from: 0 0 0; 
+      to: 0 360 0; 
+      easing: linear; 
+      dur: 5000; 
+      loop:true"               
+      >                 
+</a-box>
+
+<!--  Try changing the metalness to 0.2 and the roughness to 0.0  -->
+
+ <a-sphere
+       radius="1.2"
+       position= "2 0 2"
+       src="a4.png"
+       env-map="#env"
+       metalness="0.9"
+       roughness="0.1"                  
+       animation="
+        property: rotation; 
+        from: 0 0 0; 
+        to: 0 360 0; 
+        easing: linear; 
+        dur: 10000; 
+        loop:true"
+         >                  
+ </a-sphere>        
+
+
+
+
+
+    </a-marker> 
+    
+      <!-- large scale overlay poster -->
+
+      <a-marker type='pattern' url='pattern-marker7543.patt' smooth="true">
+
+        <a-sphere
+        radius="0.8"
+        position= "0 0.5 0"
+        src="nail.jpg"
+        env-map="#env"
+        metalness="0.9"
+        roughness="0.1"                  
+        animation="
+         property: rotation; 
+         from: 0 0 0; 
+         to: 0 360 0; 
+         easing: linear; 
+         dur: 10000; 
+         loop:true"
+          >                  
+  </a-sphere>
+
+
+      </a-marker>       
+
+     
+
+
+      <a-entity camera></a-entity>
+    </a-scene>
+
+  </body>
+</html>
