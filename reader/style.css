@@ -1,25 +1,48 @@
 body {
-    background-color: darkseagreen;
-    font-family:arial;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:17.4px;
+    line-height: 19px;
+    font-weight: bold;
+    background-color: peachpuff;
+    color:olive;
 }
 
-@font-face {
-    font-family: "outward";
-    src: url("outward-block.woff") format('woff');
-}
-
-
-@font-face {
-    font-family: 'slanted';
-    src:  url('Bourrasque-45Est.otf') format('opentype');
-  }
-
-h1 {
-    font-family:"slanted";
-    font-size:300px;
-    letter-spacing: 3px;
-}
 
 div.title {
-    font-family:"slanted";
+    font-size:47px;
+    line-height: 42px;
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:100px;
+    font-family: arial narrow;   
+    color:olive;        
+}
+
+div.details {
+    color:olive;
+    font-family: serif;
+    font-weight: normal;
+    font-size:15px;
+    line-height: 16px;
+}
+
+div.numbers {
+    color:olive;
+    font-family: serif;
+    font-weight: normal;
+    font-size:15px;
+    line-height: 16px;
+    text-align: center;
+}
+
+div.text {
+
+}
+
+div.quote {
+    margin-bottom: 100px;
+    font-size:32px;
+    line-height: 30px; 
+    font-family: arial narrow;
+    color:orangered;       
 }
