@@ -1,0 +1,23 @@
+body {
+    background-color: yellowgreen;
+}
+
+div.title {
+    font-size:60px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+div.author {
+    font-size:13px;
+}
+
+div.quote {
+    font-size:28px;
+    margin-bottom:70px;
+}
+
+div.text {
+    font-size:20px;
+    margin-bottom:20px;
+}
