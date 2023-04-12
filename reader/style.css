@@ -1,0 +1,22 @@
+body {
+    background-color: greenyellow;
+    color:blueviolet;
+    font-family: arial;
+}
+
+div.title {
+    font-size:48px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+div.quote {
+    font-size:30px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+div.text {
+    font-family: times;
+    font-size:21px;
+}
