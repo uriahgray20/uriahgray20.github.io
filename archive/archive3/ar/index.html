@@ -48,20 +48,27 @@
         <!-- This is the object <a-object> 
           Edit size, position, texture and animation here -->
 
-        <a-box 
-         width="2"
-         height="2"
-         depth="2"
-         position="0 0.5 0" 
-         rotation="0 0 0"               
-         src="sky.jpeg"
-         transparent="true"
-         alphaTest= "0.5"
-         env-map="#env"
-         metalness="1.0"
-         roughness="0.0"          
-         >                 
-        </a-box>
+          <a-cone 
+          height="3"
+          radius-top="2"
+          radius-bottom="0"           
+          position="0 0.5 0" 
+          rotation="0 0 0"               
+          src="mouth.png"
+          transparent="true"
+          alphaTest= "0.5"
+          env-map="#env"
+          metalness="1.0"
+          roughness="0.0"
+          animation="
+          property: rotation; 
+          from: 0 0 0; 
+          to: 0 360 0; 
+          easing: linear; 
+          dur: 10000; 
+          loop:true"                     
+          >                 
+        </a-cone>
 
         <!-- !!! END MARKER 1 !!! -->
       </a-marker>
