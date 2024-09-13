@@ -1,0 +1,48 @@
+body {
+    font-size:14px;
+    font-family: arial;
+    background-color: #00ACD2;
+    font-weight: bold;
+    color:#0840CE;
+}
+
+div.largetext {
+    font-size:355px;
+    line-height: 300px;
+}
+
+div.mediumtext {
+    font-size:36px;
+    line-height: 38px;
+}
+
+div.smalltext {
+    font-size:14px;
+    line-height: 16px; 
+}
+
+div.serif {
+    font-family:times;
+    font-weight:normal;
+}
+
+div.textblue {
+    color:#0840CE;
+}
+
+div.textwhite {
+    color:#ffffff;
+}
+
+div.textgold {
+    color:#A78838;
+}
+
+div.bgblue {
+    background-color: #0840CE;
+}
+
+div.bggold {
+    background-color: #A78838;
+}
+
