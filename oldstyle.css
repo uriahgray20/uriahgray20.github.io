@@ -1,0 +1,74 @@
+body {
+    background-color:black;
+    color:grey;
+    font-family:arial;
+    font-size:19px;
+    line-height: 21px;
+}
+
+@font-face {
+    font-family:'microgramma';
+    src:url('microgrammanormal.woff') format('woff');
+}
+
+div.largetext {
+    font-size:55px;
+    line-height:50px;
+    font-family:'microgramma';
+}
+
+div.mediumtext {
+    font-size:28px;
+    line-height:28px;
+}
+
+div.smalltext {
+    font-size:19px;
+    line-height: 21px;
+}
+
+div.extrasmalltext {
+    font-size:14px;
+    line-height: 16px;
+}
+
+div.mt {
+    margin-top:100px;
+}
+
+div.text-cyan {
+    color:cyan;
+}
+
+div.text-pink {
+    color:magenta;
+}
+
+div.text-grey {
+    color:grey;
+}
+
+div.container {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+div.swatch {
+    width:300px;
+    height:300px;
+    border-radius:10px;
+    background-color:grey;
+    margin-right:50px;
+}
+
+div.bg-cyan {
+    background-color: cyan;
+}
+
+div.bg-pink {
+    background-color: magenta;
+}
+
+div.bg-grey {
+    background-color: grey;
+}
