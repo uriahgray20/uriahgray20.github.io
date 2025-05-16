@@ -15,7 +15,7 @@ img, video {
 
 @font-face {
     font-family:'microgramma';
-    src:url('microgrammanormal.woff') format('woff');
+    src:url('Microgrammanormal.woff') format('woff');
 }
 
 /* Typography */
@@ -197,15 +197,25 @@ div.caption {
 /* hero video */
 
 div.herovideo {
-    width:400px;
-    position: fixed;
+    width:300px;
+    position:fixed;
     bottom:20px;
-    right: 20px;
+    right:20px;
 }
 
-video {
-    
+div.herovideo video {
+    border-radius:0px;
 }
 
+/* folio marks */
+
+div.folio {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    text-align: center;
+    color:red;
+}
 
 
