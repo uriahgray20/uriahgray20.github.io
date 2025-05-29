@@ -7,6 +7,7 @@ body {
     padding: 20px;
 }
 
+
 img, video {
     width: 100%;
     display: block;
@@ -18,13 +19,24 @@ img, video {
     src:url('Microgrammanormal.woff') format('woff');
 }
 
+div.text-pink {
+    color:magenta;
+}
+
 /* Typography */
 
+
+div.largetext.active {
+    color:magenta;
+}
 
 div.largetext {
     font-size:120px;
     line-height:100px;
+    color:blue;
 }
+
+
 
 div.mediumtext {
     font-size:40px;
@@ -100,9 +112,7 @@ div.text-cyan {
     color:cyan;
 }
 
-div.text-pink {
-    color:magenta;
-}
+
 
 div.text-grey {
     color:grey;
@@ -220,23 +230,81 @@ div.folio {
     color:red;
 }
 
-/* Popups */
 
-div.popup {
-    position:fixed;
-    top:200px;
-    left:200px;
+/* Splash screen */
+
+div.welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
 }
 
-div.hide {
-    display:none;
+div.welcome.visible {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* triggers and effects */
 
-body.update {
-    background-color: black;
+
+body.mainpage {
+
+}
+
+body.mainpage.active {
+    background-color:black;
     color:lime;
 }
 
+div.highlight {
+
+}
+
+div.highlight.active {
+    background-color: goldenrod;
+}
+
+div.popup {
+    position:fixed;
+    font-size:130px;
+    display:none;
+}
+
+div.popup.active {
+    display: block;
+}
+
+div.pop1 {
+    top:200px;
+    left:200px;
+}
+
+div.pop2 {
+    top:500px;
+    left:500px;
+
+}
+
+div.pop3 {
+    width:300px;
+    top:500px;
+    left:200px;
+    margin-left: -300px;
+    transition: margin-left 1s;
+}
+
+div.pop3.active {
+    left:200px;
+    margin-left: 0px;
+    transition:1s;
+}
 
