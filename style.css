@@ -265,13 +265,7 @@ body.mainpage.active {
     color:lime;
 }
 
-div.highlight {
 
-}
-
-div.highlight.active {
-    background-color: goldenrod;
-}
 
 div.popup {
     position:fixed;
@@ -306,5 +300,9 @@ div.pop3.active {
     left:200px;
     margin-left: 0px;
     transition:1s;
+}
+
+div.highlight {
+    color:lime;
 }
 
