@@ -1,18 +1,19 @@
 body {
     margin: 0px;
+    font-family: leida, sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 
-img {
-    width:100%;
+div {
+    box-sizing: border-box;
 }
-
 
 @font-face {
     font-family:'UN11';
     src: url('UN_11ST_Bold.woff') format('woff');
 }
+
 
 
 
@@ -23,35 +24,13 @@ h1,h2,h3 {
     font-weight: normal;
 }
 
-div.mono {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-div.sans {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-div.serif {
-    font-family: leida, sans-serif;
-}
-
-div.fontsizesmall {
-    font-size: 18px;
-}
-
-div.fontsizemedium {
-    font-size: 32px;
-}
-
 
 
 div.title {
     font-size:70px;
+    font-family: leida, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-family: 'Courier New', Courier, monospace;
-    width: 50%;
-    border:1px solid red;
 }
 
 div.subheader {
@@ -59,14 +38,14 @@ div.subheader {
 }
 
 div.quote {
-    
-    font-size:18vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:24vw;
     font-weight: bold;
 }
 
 div.footnote {
     color:gray;
-    
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -122,49 +101,41 @@ div.bg-pink {
     background-color: pink;
 }
 
+
+
+@media(max-width: 700px) {
+    div.page {
+        width:90%;
+        background-color: yellow;
+    }
+}
+
+
+.hero {
+    font-size:100px;
+}
+
+div.container {
+    display: flex;
+    flex-wrap:wrap;
+}
+
 div.width100 {
-    width:100%;
+    width: 100%;
 }
 
-div.width80 {
-    width: 80%;
-}
-
-div.width60 {
-    width: 60%;
+div.width75 {
+    width: 75%;
 }
 
 div.width50 {
     width: 50%;
 }
 
-div.width40 {
-    width: 40%;
+div.width25 {
+    width: 25%;
 }
 
-div.width20 {
-    width: 20%;
+div.pad {
+    padding:20px;
 }
-
-div.pad10 {
-    padding:10px;
-}
-
-div.margintop200 {
-    margin-top:200px;
-}
-
-div.marginleft50 {
-    margin-left:50px;
-}
-
-div.container {
-    display:flex;
-    flex-wrap:wrap;
-}
-
-div.marginauto {
-    margin-left:auto;
-    margin-right:auto;
-}
-
