@@ -1,0 +1,194 @@
+body {
+    margin: 0px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'wax';
+    src: url('WaxMelt-Regular.woff') format('woff');
+}
+
+img {
+    width:100%;
+}
+
+
+
+h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+div.mono {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.sans {
+    font-family:'wax';
+}
+
+div.serif {
+    font-family: leida, sans-serif;
+}
+
+div.fontsizesmall {
+    font-size: 18px;
+}
+
+div.fontsizemedium {
+    font-size: 32px;
+}
+
+div.textcenter {
+    text-align: center;
+}
+
+div.textright{
+    text-align: right;
+}
+
+
+
+div.title {
+    font-size:70px;
+    font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div.subheader {
+    font-size:50px;
+}
+
+div.quote {
+    
+    font-size:18vw;
+    font-weight: bold;
+}
+
+div.footnote {
+    color:gray;
+    
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div.box {
+    font-size:70px;
+    width:300px;
+    border:1px solid red;
+    padding:20px;
+    display: none;
+}
+
+div.centerbox {
+    font-size: 36px;
+    width:75%;
+    border:1px solid red;
+    margin-left: auto;
+    margin-right:auto;
+    display: none;
+}
+
+div.page {
+    width:700px;
+    border:1px solid rgb(114, 114, 237);
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.centerpage {
+    font-size:30px;
+    width:350px;
+    border:1px solid red;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.swatch {
+    width:200px;
+    height:200px;
+    margin-bottom: 10px;
+    border:1px solid black;
+}
+
+div.bg-blue {
+    background-color: rgb(137, 137, 251);
+}
+
+div.bg-green {
+    background-color: rgb(130, 255, 130);
+}
+
+div.bg-grey {
+    background-color: lightgray;
+}
+
+div.bg-pink {
+    background-color: pink;
+}
+
+div.width80 {
+    width: 80%;
+}
+
+div.width50 {
+    width: 50%;
+}
+
+div.width25 {
+    width: 25%;
+}
+
+div.width16 {
+    width: 16.66666667%;
+}
+
+div.container {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+div.alignitemscenter {
+    align-items: center;
+}
+
+div.table {
+    border-top:1px solid black;
+}
+
+div.banner {
+    width:100vw;
+    height:100vh;
+}
+
+div.banner img {
+    object-fit: cover;
+    height:100%;
+}
+
+div.chatbubble {
+    font-size:30px;
+    border-radius:100px;
+    padding:20px;
+    margin-top:100px;
+}
+
+div.marginleftauto {
+    margin-left:auto;
+}
+
+div.marginauto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.floatimg {
+    width:110px;
+    float:left;
+    margin-bottom:-8px;
+    margin-right:10px;
+}
