@@ -1,12 +1,7 @@
 body {
-    background-color: red;
-}
-
-@font-face {
-    font-family:'wax';
-    src: url('WaxMelt-Regular.woff') format('woff');
+    background-color:seagreen;
 }
 
 h1 {
-    font-family: "wax";
+    font-family:"tiffin-latin-variable";
 }
