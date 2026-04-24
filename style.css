@@ -1,0 +1,18 @@
+body {
+    background-color: red;
+}
+
+@font-face {
+    font-family: "wax";
+    src: url("WaxMelt-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family:"bigcaslon";
+    src: url("BigCaslon.woff") format("woff");
+}
+
+h1 {
+    font-family:"wax";
+    font-size:200px;
+}
